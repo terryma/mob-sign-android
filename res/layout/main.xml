@@ -3,7 +3,7 @@
 	android:layout_width="fill_parent" android:layout_height="fill_parent"
 	android:id="@+id/my_relative_layout_id" android:orientation="vertical">
 	<TextView android:layout_width="fill_parent" android:text="You have received an authentication request for $site with login $login"
-		android:id="@+id/request_title" android:textSize="30sp" android:textAppearance="@style/ButtonText" android:layout_margin="10dp" android:layout_height="wrap_content"/>
+		android:id="@+id/request_title" android:textSize="25sp" android:textAppearance="@style/ButtonText" android:layout_margin="10dp" android:layout_height="wrap_content"/>
 	<RelativeLayout android:id="@+id/LinearLayout1" xmlns:android="http://schemas.android.com/apk/res/android"
 		android:orientation="vertical" android:layout_width="fill_parent"
 		android:layout_height="fill_parent" android:gravity="bottom">

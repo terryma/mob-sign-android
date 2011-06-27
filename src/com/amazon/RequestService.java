@@ -27,6 +27,7 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.net.http.AndroidHttpClient;
 import android.os.IBinder;
+import android.provider.Settings.Secure;
 import android.util.Log;
 
 import com.google.gson.Gson;
@@ -40,7 +41,7 @@ import com.google.gson.Gson;
 public class RequestService extends Service {
 
 	Timer timer = new Timer();
-
+	
 	class MyTimerTask extends TimerTask {
 
 		Service service;
@@ -51,9 +52,11 @@ public class RequestService extends Service {
 
 		@Override
 		public void run() {
+		    String deviceId = Secure.getString(service.getContentResolver(),
+		            Secure.ANDROID_ID);
 			HttpClient client = AndroidHttpClient.newInstance("fuckme!");
 			HttpGet post = new HttpGet(
-					"http://184.72.102.84/pull-device?deviceId=12345");
+					"http://184.72.102.84/pull-device?deviceId=" + deviceId);
 			HttpResponse response = null;
 			InputStream is = null;
 
