@@ -28,8 +28,9 @@ public final class R {
         public static final int icon=0x7f020002;
     }
     public static final class id {
-        public static final int allow=0x7f070002;
-        public static final int deny=0x7f070003;
+        public static final int LinearLayout1=0x7f070002;
+        public static final int allow=0x7f070003;
+        public static final int deny=0x7f070004;
         public static final int my_relative_layout_id=0x7f070000;
         public static final int request_title=0x7f070001;
     }

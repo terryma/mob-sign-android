@@ -2,18 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent" android:layout_height="fill_parent"
 	android:id="@+id/my_relative_layout_id" android:orientation="vertical">
-	<TextView android:layout_width="fill_parent" android:text="Someone has requested nflkewf ewlf jlkew jflkewj flkjew flk ewlfjw ejf wljf lwje flkweflew f"
-		android:layout_height="wrap_content" android:id="@+id/request_title" />
-	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	<TextView android:layout_width="fill_parent" android:text="You have received an authentication request for $site with login $login"
+		android:id="@+id/request_title" android:textSize="30sp" android:textAppearance="@style/ButtonText" android:layout_margin="10dp" android:layout_height="wrap_content"/>
+	<RelativeLayout android:id="@+id/LinearLayout1" xmlns:android="http://schemas.android.com/apk/res/android"
 		android:orientation="vertical" android:layout_width="fill_parent"
-		android:layout_height="fill_parent">
-
-<Button android:text="@string/allow" android:id="@+id/allow" android:background="@drawable/btn_green" style="@style/ButtonText" />
-<Button android:text="@string/deny" android:id="@+id/deny" android:background="@drawable/btn_red" style="@style/ButtonText" />
+		android:layout_height="fill_parent" android:gravity="bottom">
 
 
 		<!-- ... -->
-	</LinearLayout>
+		<Button android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:background="@drawable/btn_green" android:id="@+id/allow" style="@style/ButtonText" android:text="@string/allow"></Button>
+<Button android:layout_alignParentLeft="true" android:layout_below="@+id/allow" android:background="@drawable/btn_red" android:id="@+id/deny" style="@style/ButtonText" android:text="@string/deny" android:layout_width="match_parent"></Button>
+	</RelativeLayout>
 </LinearLayout>
 
 
