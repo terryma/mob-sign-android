@@ -87,9 +87,7 @@ public class AuthRequestsActivity extends Activity implements
 			text.setText(currentTuple.site + " - " + currentTuple.uid);
 			text.invalidate();
 		} else {
-			TextView text = (TextView) findViewById(R.id.request_title);
-			text.setText("");
-			text.invalidate();
+			finish();
 		}
 	}
 
