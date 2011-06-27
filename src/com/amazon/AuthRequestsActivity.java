@@ -11,9 +11,9 @@ import org.apache.http.client.methods.HttpGet;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.net.http.AndroidHttpClient;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -84,7 +84,9 @@ public class AuthRequestsActivity extends Activity implements
 
 		if (currentTuple != null) {
 			TextView text = (TextView) findViewById(R.id.request_title);
-			text.setText(currentTuple.site + " - " + currentTuple.uid);
+			String color = "#19DDF7";
+			String styledText = "You have received an authentication request for <font color='" + color + "'>" + currentTuple.site + "</font> with login <font color='" + color + "'>" + currentTuple.uid + "</font>";
+			text.setText(Html.fromHtml(styledText), TextView.BufferType.SPANNABLE);
 			text.invalidate();
 		} else {
 			TextView text = (TextView) findViewById(R.id.request_title);
