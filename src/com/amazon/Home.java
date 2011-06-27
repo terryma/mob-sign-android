@@ -1,6 +1,8 @@
 package com.amazon;
 
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.app.ActivityManager.RunningServiceInfo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +27,10 @@ public class Home extends Activity implements OnClickListener {
 		checkbox.setOnClickListener(this);
 		service_on_message = (TextView) findViewById(R.id.service_on_message);
 		service_on_message.setVisibility(View.INVISIBLE);
+		if (isMyServiceRunning()) {
+			checkbox.setChecked(true);
+			service_on_message.setVisibility(View.VISIBLE);
+		}
 	}
 
 	@Override
@@ -60,6 +66,18 @@ public class Home extends Activity implements OnClickListener {
 		Intent i = new Intent("com.amazon.REQUEST_SERVICE");
 		i.setAction("com.amazon.REQUEST_SERVICE");
 		this.stopService(i);
+	}
+
+	private boolean isMyServiceRunning() {
+		ActivityManager manager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
+		for (RunningServiceInfo service : manager
+				.getRunningServices(Integer.MAX_VALUE)) {
+			if ("com.amazon.RequestService".equals(service.service
+					.getClassName())) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 }
