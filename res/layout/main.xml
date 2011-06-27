@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical" android:layout_width="fill_parent"
-	android:layout_height="fill_parent" android:id="@+id/my_relative_layout_id">
-	<TextView android:layout_width="fill_parent" android:text="Request Title"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:id="@+id/my_relative_layout_id" android:orientation="vertical">
+	<TextView android:layout_width="fill_parent" android:text="Someone has requested nflkewf ewlf jlkew jflkewj flkjew flk ewlfjw ejf wljf lwje flkweflew f"
 		android:layout_height="wrap_content" android:id="@+id/request_title" />
 	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-		android:orientation="horizontal" android:layout_width="fill_parent"
+		android:orientation="vertical" android:layout_width="fill_parent"
 		android:layout_height="fill_parent">
-		<Button android:layout_width="wrap_content"
-			android:layout_height="wrap_content" android:text="@string/allow"
-			android:id="@+id/allow" />
-		<Button android:layout_width="wrap_content"
-			android:layout_height="wrap_content" android:text="@string/deny"
-			android:id="@+id/deny" />
+
+<Button android:text="@string/allow" android:id="@+id/allow" android:background="@drawable/btn_green" style="@style/ButtonText" />
+<Button android:text="@string/deny" android:id="@+id/deny" android:background="@drawable/btn_red" style="@style/ButtonText" />
+
+
+		<!-- ... -->
 	</LinearLayout>
 </LinearLayout>
+
+
