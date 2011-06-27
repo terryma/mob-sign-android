@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="hello">Permission Requests</string>
-	<string name="app_name">Test</string>
+	<string name="welcome"> Submit an Auth Request on website to begin. </string>
+	<string name="app_name">MobSign</string>
+	<string name="service_control">Listen to Auth Requests.</string>
 	<string name="allow">Approve</string>
 	<string name="deny">Deny</string>
 	<style name="ButtonText">
